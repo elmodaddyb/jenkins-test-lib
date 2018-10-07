@@ -3,7 +3,6 @@ package com.srcdevbin
 
 class SourceUtils implements Serializable {
 	
-	def url
 	def script
 	
 	SourceUtils(script) {
@@ -11,8 +10,8 @@ class SourceUtils implements Serializable {
 	}
 	
 	def checkoutSource(Closure cl) {
-		def params
-		cl.delegate = params
+		SourceModel model = new SourceModel()
+		cl.delegate = model
 		cl()
 		script.println "The URL --> ${params.url}"
 		script.sh "echo hello - ${params.url}"
