@@ -22,7 +22,7 @@ class SourceUtils {
 		clonedCl.delegate = this
 		clonedCl.resolveStrategy = Closure.DELEGATE_FIRST
 		clonedCl()
-		println "The URL - ${url}"
+		script.println "The URL - ${url}"
 	}
 	
 	def script(Closure cl) {
