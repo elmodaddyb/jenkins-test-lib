@@ -1,7 +1,7 @@
 package com.srcdevbin
 
 
-class SourceUtils {
+class SourceUtils implements Serializable {
 	
 	def url
 	def script
