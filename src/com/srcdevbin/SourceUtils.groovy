@@ -11,9 +11,10 @@ class SourceUtils implements Serializable {
 	}
 	
 	def checkoutSource(Closure cl) {
-		cl.delegate = this
+		def params
+		cl.delegate = params
 		cl()
-		script.println "The URL --> ${this.url}"
-		script.sh "echo hello - ${this.url}"
+		script.println "The URL --> ${params.url}"
+		script.sh "echo hello - ${params.url}"
 	}
 }
