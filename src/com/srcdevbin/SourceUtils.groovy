@@ -13,6 +13,7 @@ class SourceUtils implements Serializable {
 		def params = [:]
 		cl.delegate = params
 		cl()
+		println params
 		script.println params.url
 		script.sh "echo hello - ${params.url}"
 	}
