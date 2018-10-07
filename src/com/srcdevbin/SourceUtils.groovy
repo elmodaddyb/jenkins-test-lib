@@ -21,6 +21,7 @@ class SourceUtils {
 		Closure clonedCl = cl.clone()
 		clonedCl.delegate = this
 		clonedCl.resolveStrategy = Closure.DELEGATE_FIRST
+		script.println clonedCl.delegate
 		clonedCl()
 		script.println "The URL - ${url}"
 	}
