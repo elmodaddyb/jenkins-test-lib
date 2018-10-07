@@ -13,7 +13,7 @@ class SourceUtils {
 	def checkoutSource(Closure cl) {
 		invokeClosure(cl)
 		script {
-			sh "echo hello - ${url}"
+			script.sh "echo hello - ${url}"
 		}
 	}
 	
