@@ -10,8 +10,8 @@ class SourceUtils implements Serializable {
 	}
 	
 	def checkoutSource(Closure cl) {
-		SourceModel model = new SourceModel()
-		cl.delegate = model
+		def params = [:]
+		cl.delegate = params
 		cl()
 		script.println "The URL --> ${params.url}"
 		script.sh "echo hello - ${params.url}"
